@@ -18,7 +18,7 @@ public:
 private slots:
     void on_pushButton_clicked();  
     void on_pushButton_2_clicked();
-    void on_pushButton_3_clicked();
+//    void on_pushButton_3_clicked();
 
     void on_pushButton_Run_clicked();
     void on_pushButton_Step_clicked();
@@ -27,6 +27,9 @@ private slots:
 
    // void on_comboBox_Mode_;
     void on_pushButton_Mode_clicked();
+
+    // slider for clock speed
+    void on_horizontalSlider_Clock_moved();
 
 private:
     Ui::MainWindow *ui;

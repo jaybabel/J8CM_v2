@@ -606,7 +606,7 @@
     <property name="title">
      <string>Clock Speed</string>
     </property>
-    <widget class="QSlider" name="horizontalSlider">
+    <widget class="QSlider" name="horizontalSlider_Clock">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -614,6 +614,12 @@
        <width>160</width>
        <height>22</height>
       </rect>
+     </property>
+     <property name="maximum">
+      <number>5</number>
+     </property>
+     <property name="value">
+      <number>3</number>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
