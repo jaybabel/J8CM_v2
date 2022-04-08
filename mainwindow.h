@@ -20,6 +20,14 @@ private slots:
     void on_pushButton_2_clicked();
     void on_pushButton_3_clicked();
 
+    void on_pushButton_Run_clicked();
+    void on_pushButton_Step_clicked();
+    void on_pushButton_Fetch_clicked();
+    void on_pushButton_Execute_clicked();
+
+   // void on_comboBox_Mode_;
+    void on_pushButton_Mode_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

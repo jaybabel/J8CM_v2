@@ -81,7 +81,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="pushButton_Step">
     <property name="geometry">
      <rect>
       <x>950</x>
@@ -567,7 +567,7 @@
     <property name="title">
      <string>Inst. Cycle</string>
     </property>
-    <widget class="QRadioButton" name="radioButton">
+    <widget class="QRadioButton" name="radioButton_Fetch">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -577,10 +577,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>fetch</string>
+      <string>Fetch</string>
      </property>
     </widget>
-    <widget class="QRadioButton" name="radioButton_2">
+    <widget class="QRadioButton" name="radioButton_Execute">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -636,7 +636,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="pushButton_Fetch">
     <property name="geometry">
      <rect>
       <x>950</x>
@@ -649,7 +649,7 @@
      <string>Fetch</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="pushButton_Execute">
     <property name="geometry">
      <rect>
       <x>950</x>
@@ -662,7 +662,7 @@
      <string>Execute</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_6">
+   <widget class="QPushButton" name="pushButton_Run">
     <property name="geometry">
      <rect>
       <x>950</x>
@@ -3981,14 +3981,57 @@
      <column/>
     </widget>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="comboBox_Mode">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>470</y>
+      <x>520</x>
+      <y>510</y>
       <width>141</width>
       <height>22</height>
      </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Front Panel</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Memory Menu</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>I/O Panel</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Loader</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Data Destruct</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Quit</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Mode">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>509</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Go</string>
     </property>
    </widget>
    <zorder>groupBox_IR</zorder>
@@ -3996,12 +4039,12 @@
    <zorder>label</zorder>
    <zorder>pushButton_2</zorder>
    <zorder>label_2</zorder>
-   <zorder>pushButton_3</zorder>
+   <zorder>pushButton_Step</zorder>
    <zorder>groupBox_ICycle</zorder>
    <zorder>groupBox_ClockSpeed</zorder>
-   <zorder>pushButton_4</zorder>
-   <zorder>pushButton_5</zorder>
-   <zorder>pushButton_6</zorder>
+   <zorder>pushButton_Fetch</zorder>
+   <zorder>pushButton_Execute</zorder>
+   <zorder>pushButton_Run</zorder>
    <zorder>groupBox_PC</zorder>
    <zorder>groupBox_Accum</zorder>
    <zorder>groupBox_XReg</zorder>
@@ -4010,7 +4053,8 @@
    <zorder>groupBox_YReg</zorder>
    <zorder>groupBox_PSW</zorder>
    <zorder>groupBox_Stack</zorder>
-   <zorder>comboBox</zorder>
+   <zorder>comboBox_Mode</zorder>
+   <zorder>pushButton_Mode</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
