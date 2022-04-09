@@ -23,53 +23,11 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>470</y>
-      <width>111</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Set PC</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>470</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>510</y>
-      <width>111</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Exit Panel Mode</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>510</y>
+      <x>30</x>
+      <y>480</y>
       <width>151</width>
       <height>31</height>
      </rect>
@@ -84,8 +42,8 @@
    <widget class="QPushButton" name="pushButton_Step">
     <property name="geometry">
      <rect>
-      <x>950</x>
-      <y>400</y>
+      <x>980</x>
+      <y>460</y>
       <width>75</width>
       <height>24</height>
      </rect>
@@ -558,8 +516,8 @@
    <widget class="QGroupBox" name="groupBox_ICycle">
     <property name="geometry">
      <rect>
-      <x>850</x>
-      <y>402</y>
+      <x>880</x>
+      <y>462</y>
       <width>91</width>
       <height>80</height>
      </rect>
@@ -597,7 +555,7 @@
    <widget class="QGroupBox" name="groupBox_ClockSpeed">
     <property name="geometry">
      <rect>
-      <x>760</x>
+      <x>420</x>
       <y>490</y>
       <width>281</width>
       <height>51</height>
@@ -611,28 +569,45 @@
       <rect>
        <x>10</x>
        <y>20</y>
-       <width>160</width>
+       <width>181</width>
        <height>22</height>
       </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
      </property>
      <property name="maximum">
       <number>5</number>
      </property>
+     <property name="singleStep">
+      <number>1</number>
+     </property>
      <property name="value">
-      <number>3</number>
+      <number>1</number>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="tickPosition">
+      <enum>QSlider::TicksBothSides</enum>
+     </property>
+     <property name="tickInterval">
+      <number>1</number>
      </property>
     </widget>
     <widget class="QLCDNumber" name="lcdNumber">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>20</y>
-       <width>51</width>
-       <height>23</height>
+       <x>220</x>
+       <y>12</y>
+       <width>41</width>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(10, 10, 10);
+font: 700 9pt &quot;Segoe UI&quot;;
+color: rgb(85, 255, 0);</string>
      </property>
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
@@ -640,13 +615,19 @@
      <property name="lineWidth">
       <number>1</number>
      </property>
+     <property name="mode">
+      <enum>QLCDNumber::Dec</enum>
+     </property>
+     <property name="intValue" stdset="0">
+      <number>1</number>
+     </property>
     </widget>
    </widget>
    <widget class="QPushButton" name="pushButton_Fetch">
     <property name="geometry">
      <rect>
-      <x>950</x>
-      <y>430</y>
+      <x>980</x>
+      <y>490</y>
       <width>75</width>
       <height>24</height>
      </rect>
@@ -658,8 +639,8 @@
    <widget class="QPushButton" name="pushButton_Execute">
     <property name="geometry">
      <rect>
-      <x>950</x>
-      <y>460</y>
+      <x>980</x>
+      <y>520</y>
       <width>75</width>
       <height>24</height>
      </rect>
@@ -671,8 +652,8 @@
    <widget class="QPushButton" name="pushButton_Run">
     <property name="geometry">
      <rect>
-      <x>950</x>
-      <y>370</y>
+      <x>980</x>
+      <y>430</y>
       <width>75</width>
       <height>24</height>
      </rect>
@@ -1007,6 +988,9 @@
        <font>
         <pointsize>6</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
       <property name="text">
        <string/>
@@ -3911,10 +3895,10 @@
    <widget class="QGroupBox" name="groupBox_Stack">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>30</x>
       <y>270</y>
       <width>241</width>
-      <height>161</height>
+      <height>191</height>
      </rect>
     </property>
     <property name="title">
@@ -3926,7 +3910,7 @@
        <x>10</x>
        <y>20</y>
        <width>221</width>
-       <height>121</height>
+       <height>161</height>
       </rect>
      </property>
      <property name="font">
@@ -3990,8 +3974,8 @@
    <widget class="QComboBox" name="comboBox_Mode">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>510</y>
+      <x>30</x>
+      <y>520</y>
       <width>141</width>
       <height>22</height>
      </rect>
@@ -4030,8 +4014,8 @@
    <widget class="QPushButton" name="pushButton_Mode">
     <property name="geometry">
      <rect>
-      <x>670</x>
-      <y>509</y>
+      <x>180</x>
+      <y>520</y>
       <width>75</width>
       <height>24</height>
      </rect>
@@ -4041,9 +4025,6 @@
     </property>
    </widget>
    <zorder>groupBox_IR</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>label</zorder>
-   <zorder>pushButton_2</zorder>
    <zorder>label_2</zorder>
    <zorder>pushButton_Step</zorder>
    <zorder>groupBox_ICycle</zorder>

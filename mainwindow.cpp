@@ -15,16 +15,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
-{
-    ui->label->setText("Hello World");
-}
-
-void MainWindow::on_pushButton_2_clicked()
-{
-    ui->label_2->setText("Goodbye Cruel World");
-}
-
 void MainWindow::on_pushButton_Run_clicked()
 {
     ui->label_2->setText("Run");
@@ -53,12 +43,9 @@ void MainWindow::on_pushButton_Mode_clicked()
 }
 
 
-//void MainWindow::on_pushButton_3_clicked()
-//{
-//    ui->lcdNumber->display(2);
-//}
-
-void MainWindow::on_horizontalSlider_Clock_moved()
+void MainWindow::on_horizontalSlider_Clock_sliderMoved()
 {
-    ui->lcdNumber->display(2);
+    ui->lcdNumber->display(ui->horizontalSlider_Clock->sliderPosition());
+//    ui->lcdNumber->display(ui->horizontalSlider_Clock->value());
+//    ui->label_2->setText("Clock Speed");
 }
