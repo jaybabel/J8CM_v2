@@ -16,7 +16,6 @@ public:
     ~MainWindow();
 
 private slots:
-
     void on_pushButton_Run_clicked();
     void on_pushButton_Step_clicked();
     void on_pushButton_Fetch_clicked();

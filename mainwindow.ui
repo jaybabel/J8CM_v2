@@ -25,12 +25,18 @@
   <property name="styleSheet">
    <string notr="true"/>
   </property>
+  <property name="iconSize">
+   <size>
+    <width>10</width>
+    <height>24</height>
+   </size>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>480</y>
+      <x>820</x>
+      <y>280</y>
       <width>151</width>
       <height>31</height>
      </rect>
@@ -594,8 +600,8 @@
    <widget class="QGroupBox" name="groupBox_ClockSpeed">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>490</y>
+      <x>810</x>
+      <y>360</y>
       <width>251</width>
       <height>51</height>
      </rect>
@@ -3951,29 +3957,41 @@ color: rgb(85, 255, 0);</string>
      <rect>
       <x>30</x>
       <y>280</y>
-      <width>241</width>
+      <width>161</width>
       <height>191</height>
      </rect>
     </property>
     <property name="title">
      <string>Stack</string>
     </property>
-    <widget class="QTableWidget" name="tableWidget">
+    <widget class="QTableWidget" name="tableWidget_StackView">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>20</y>
-       <width>221</width>
+       <width>141</width>
        <height>161</height>
       </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
      </property>
      <property name="font">
       <font>
        <pointsize>8</pointsize>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
      <property name="horizontalScrollBarPolicy">
       <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QAbstractScrollArea::AdjustIgnored</enum>
      </property>
      <property name="alternatingRowColors">
       <bool>true</bool>
@@ -3988,7 +4006,10 @@ color: rgb(85, 255, 0);</string>
       <number>15</number>
      </attribute>
      <attribute name="horizontalHeaderDefaultSectionSize">
-      <number>100</number>
+      <number>60</number>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>false</bool>
      </attribute>
      <attribute name="verticalHeaderVisible">
       <bool>false</bool>
@@ -3998,6 +4019,9 @@ color: rgb(85, 255, 0);</string>
      </attribute>
      <attribute name="verticalHeaderDefaultSectionSize">
       <number>20</number>
+     </attribute>
+     <attribute name="verticalHeaderStretchLastSection">
+      <bool>false</bool>
      </attribute>
      <row/>
      <row/>
@@ -4031,8 +4055,8 @@ color: rgb(85, 255, 0);</string>
    <widget class="QComboBox" name="comboBox_Mode">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>520</y>
+      <x>820</x>
+      <y>320</y>
       <width>141</width>
       <height>22</height>
      </rect>
@@ -4071,8 +4095,8 @@ color: rgb(85, 255, 0);</string>
    <widget class="QPushButton" name="pushButton_Mode">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>520</y>
+      <x>970</x>
+      <y>320</y>
       <width>75</width>
       <height>24</height>
      </rect>
