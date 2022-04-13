@@ -35,7 +35,7 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>820</x>
+      <x>830</x>
       <y>280</y>
       <width>151</width>
       <height>31</height>
@@ -600,9 +600,9 @@
    <widget class="QGroupBox" name="groupBox_ClockSpeed">
     <property name="geometry">
      <rect>
-      <x>810</x>
+      <x>830</x>
       <y>360</y>
-      <width>251</width>
+      <width>221</width>
       <height>51</height>
      </rect>
     </property>
@@ -614,7 +614,7 @@
       <rect>
        <x>10</x>
        <y>20</y>
-       <width>181</width>
+       <width>161</width>
        <height>22</height>
       </rect>
      </property>
@@ -643,9 +643,9 @@
     <widget class="QLCDNumber" name="lcdNumber">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>180</x>
        <y>20</y>
-       <width>41</width>
+       <width>31</width>
        <height>21</height>
       </rect>
      </property>
@@ -3955,10 +3955,10 @@ color: rgb(85, 255, 0);</string>
    <widget class="QGroupBox" name="groupBox_Stack">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>20</x>
       <y>280</y>
       <width>161</width>
-      <height>191</height>
+      <height>261</height>
      </rect>
     </property>
     <property name="title">
@@ -3970,7 +3970,7 @@ color: rgb(85, 255, 0);</string>
        <x>10</x>
        <y>20</y>
        <width>141</width>
-       <height>161</height>
+       <height>231</height>
       </rect>
      </property>
      <property name="maximumSize">
@@ -4055,7 +4055,7 @@ color: rgb(85, 255, 0);</string>
    <widget class="QComboBox" name="comboBox_Mode">
     <property name="geometry">
      <rect>
-      <x>820</x>
+      <x>830</x>
       <y>320</y>
       <width>141</width>
       <height>22</height>
@@ -4095,7 +4095,7 @@ color: rgb(85, 255, 0);</string>
    <widget class="QPushButton" name="pushButton_Mode">
     <property name="geometry">
      <rect>
-      <x>970</x>
+      <x>980</x>
       <y>320</y>
       <width>75</width>
       <height>24</height>
@@ -4105,6 +4105,145 @@ color: rgb(85, 255, 0);</string>
      <string>Go</string>
     </property>
    </widget>
+   <widget class="QGroupBox" name="groupBox_MemView">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>280</y>
+      <width>411</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Main Memory</string>
+    </property>
+    <widget class="QTableWidget" name="tableWidget_MainMemory">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>391</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="rowCount">
+      <number>64</number>
+     </property>
+     <property name="columnCount">
+      <number>5</number>
+     </property>
+     <attribute name="horizontalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>15</number>
+     </attribute>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>75</number>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>20</number>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>20</number>
+     </attribute>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <column/>
+     <column/>
+     <column/>
+     <column/>
+     <column/>
+    </widget>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>120</y>
+      <width>251</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));</string>
+    </property>
+   </widget>
+   <zorder>groupBox_MemView</zorder>
    <zorder>groupBox_IR</zorder>
    <zorder>label_2</zorder>
    <zorder>pushButton_Step</zorder>
@@ -4123,6 +4262,7 @@ color: rgb(85, 255, 0);</string>
    <zorder>groupBox_Stack</zorder>
    <zorder>comboBox_Mode</zorder>
    <zorder>pushButton_Mode</zorder>
+   <zorder>graphicsView</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
