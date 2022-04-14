@@ -31,6 +31,8 @@ private slots:
     void on_pushButton_setMem_clicked();
     void on_pushButton_getMem_clicked();
 
+    void memory_view();
+
 private:
     Ui::MainWindow *ui;
 };

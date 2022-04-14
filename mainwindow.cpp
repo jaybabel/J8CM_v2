@@ -36,21 +36,31 @@ MainWindow::MainWindow(QWidget *parent)
 //    tableWidget_StackView->setHorizontalHeaderItem(1,header2);
 
     // populate Main Memory address column
-    int i;
     int a = 0;
     QString addr;
-
-    for (i=0; i<64; ++i) {
+    for (int row=0; row<64; ++row) {
         addr.setNum(a);
-        ui->tableWidget_MainMemory->setItem(i, 0, new QTableWidgetItem(addr + ":"));
+        if (a < 10) {
+        ui->tableWidget_MainMemory->setItem(row, 0, new QTableWidgetItem("00" + addr + ":"));
+        }
+        else if ((a > 10) && (a < 100)) {
+        ui->tableWidget_MainMemory->setItem(row, 0, new QTableWidgetItem("0" + addr + ":"));
+        }
+        else {
+        ui->tableWidget_MainMemory->setItem(row, 0, new QTableWidgetItem(addr + ":"));
+        }
         a = a + 4;
     }
+
+    memory_view();
+
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
 
 // Instruction Cycle Run-Step-Fetch-Execute
 void MainWindow::on_pushButton_Run_clicked()
@@ -109,6 +119,7 @@ void MainWindow::on_pushButton_setMem_clicked()
      int v = valStr.toInt();
     j8Memory.setMemoryByte(a, v);
     //ui->lineEdit_ValueIn->setText(addrStr);
+    memory_view();
 }
 
 void MainWindow::on_pushButton_getMem_clicked()
@@ -120,4 +131,21 @@ void MainWindow::on_pushButton_getMem_clicked()
     int v = j8Memory.getMemoryByte(a);
     valStr.setNum(v);
     ui->label_ValueOut->setText(valStr);
+}
+
+// Load/Refresh Memory View
+void MainWindow::memory_view()
+{
+    int a=0;
+    int v;
+    QString value;
+
+    for (int row=0; row<64; ++row) {
+        for (int col=1; col<5; ++col) {
+            v = j8Memory.getMemoryByte(a);
+            value.setNum(v);
+            ui->tableWidget_MainMemory->setItem(row, col, new QTableWidgetItem(value));
+            ++a;
+        }
+    }
 }
