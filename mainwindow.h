@@ -27,6 +27,10 @@ private slots:
     // slider for clock speed
     void on_horizontalSlider_Clock_sliderMoved();
 
+    // Memory Editor
+    void on_pushButton_setMem_clicked();
+    void on_pushButton_getMem_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

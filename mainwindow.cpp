@@ -2,6 +2,12 @@
 #include "ui_mainwindow.h"
 #include<QMessageBox>
 
+#include <QString>
+
+#include "main_memory.cpp"
+
+MainMemory j8Memory;
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -79,3 +85,31 @@ void MainWindow::on_horizontalSlider_Clock_sliderMoved()
 
 //void MainWindow::
 // ui->tableWidget_StackView->setHorizontalHeaderItem(1, "Address")
+
+
+
+// Memory Edit
+
+void MainWindow::on_pushButton_setMem_clicked()
+{
+
+    QString addrStr, valStr;
+
+    addrStr = ui->lineEdit_AddrIn->text();
+    valStr = ui->lineEdit_ValueIn->text();
+     int a = addrStr.toInt();
+     int v = valStr.toInt();
+    j8Memory.setMemoryByte(a, v);
+    //ui->lineEdit_ValueIn->setText(addrStr);
+}
+
+void MainWindow::on_pushButton_getMem_clicked()
+{
+    QString addrStr, valStr;
+
+    addrStr = ui->lineEdit_AddrOut->text();
+    int a = addrStr.toInt();
+    int v = j8Memory.getMemoryByte(a);
+    valStr.setNum(v);
+    ui->label_ValueOut->setText(valStr);
+}
