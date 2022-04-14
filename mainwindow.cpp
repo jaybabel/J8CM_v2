@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    // populate Stack with test data
     ui->tableWidget_StackView->setHorizontalHeaderItem(0, new QTableWidgetItem("Address"));
     ui->tableWidget_StackView->setHorizontalHeaderItem(1, new QTableWidgetItem("Contents"));
     ui->tableWidget_StackView->setItem(0, 0, new QTableWidgetItem("11111111"));
@@ -33,6 +34,17 @@ MainWindow::MainWindow(QWidget *parent)
 //    QTableWidgetItem *header2 = new QTableWidgetItem();
 //    header2->setText("Value");
 //    tableWidget_StackView->setHorizontalHeaderItem(1,header2);
+
+    // populate Main Memory address column
+    int i;
+    int a = 0;
+    QString addr;
+
+    for (i=0; i<64; ++i) {
+        addr.setNum(a);
+        ui->tableWidget_MainMemory->setItem(i, 0, new QTableWidgetItem(addr + ":"));
+        a = a + 4;
+    }
 }
 
 MainWindow::~MainWindow()
@@ -40,6 +52,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+// Instruction Cycle Run-Step-Fetch-Execute
 void MainWindow::on_pushButton_Run_clicked()
 {
     ui->label_2->setText("Run");
@@ -67,29 +80,24 @@ void MainWindow::on_pushButton_Execute_clicked()
     ui->radioButton_Execute->setCheckable(true);
     ui->radioButton_Fetch->setChecked(false);
     ui->radioButton_Execute->setChecked(true);
-//    ui->radioButton_Execute->setCheckable(false);
     //set PSW bit 7 to one after the execute cycle
     ui->radioButton_PSW7->setChecked(false);
 }
 
+
+// Menu selection from drop-down comboBox
 void MainWindow::on_pushButton_Mode_clicked()
 {
     ui->label_2->setText(ui->comboBox_Mode->currentText());
-    //QMessageBox::information(this, "Item Selection", ui->comboBox_Mode->currentText());
 }
 
+// Clock Speed
 void MainWindow::on_horizontalSlider_Clock_sliderMoved()
 {
     ui->lcdNumber->display(ui->horizontalSlider_Clock->sliderPosition());
 }
 
-//void MainWindow::
-// ui->tableWidget_StackView->setHorizontalHeaderItem(1, "Address")
-
-
-
 // Memory Edit
-
 void MainWindow::on_pushButton_setMem_clicked()
 {
 
